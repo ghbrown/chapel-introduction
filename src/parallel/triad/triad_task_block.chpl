@@ -1,4 +1,4 @@
-config const n : int = 1000;
+config const n : int = (100e6 : int);
 config const n_tasks : int = here.maxTaskPar;
 
 var beta : real = 2.0;

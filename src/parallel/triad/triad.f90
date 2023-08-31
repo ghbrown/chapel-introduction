@@ -13,7 +13,7 @@ program add
 
     !$omp parallel &
     !$omp shared ( A, B, C ) &
-    !$omp private ( i )
+    !$omp private ( i, beta )
     !$omp do
     do i=1,N
         C(i) = A(i) + beta*B(i)
