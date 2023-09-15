@@ -11,15 +11,5 @@ program add
     A = 1.0
     B = 2.0
 
-    !$omp parallel &
-    !$omp shared ( A, B, C ) &
-    !$omp private ( i ) &
-    !$omp firstprivate ( beta )
-    !$omp do
-    do i=1,N
-        C(i) = A(i) + beta*B(i)
-    end do
-    !$omp end do
-    !$omp end parallel
     print *, C(10)  ! prevent code deletion by compiler in -O3
 end program add
